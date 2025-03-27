@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize data storage if empty
+   
     if (!localStorage.getItem('players')) {
       localStorage.setItem('players', JSON.stringify([]));
     }
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('scouts', JSON.stringify([]));
     }
   
-    // Smooth scrolling and section activation
+   
     document.querySelectorAll('.menu-content a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
-    // Intersection Observer for section animations
+  
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
       observer.observe(section);
     });
   
-    // Player Profile Form
+   
     const playerForm = document.getElementById('player-form');
     if (playerForm) {
       playerForm.addEventListener('submit', function(e) {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   
-    // Scout Profile Form
+  
     const scoutForm = document.getElementById('scout-form');
     if (scoutForm) {
       scoutForm.addEventListener('submit', function(e) {
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   
-    // Contact Form
+   
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
       contactForm.addEventListener('submit', function(e) {
@@ -100,14 +100,14 @@ document.addEventListener('DOMContentLoaded', function() {
           timestamp: new Date().toISOString()
         };
   
-        // In a real app, this would be sent to a server
+      
         console.log('Contact form submitted:', contactData);
         showNotification('Thank you for your message! We will get back to you soon.', 'success');
         this.reset();
       });
     }
   
-    // Search Functionality
+   
     const searchButton = document.getElementById('search-button');
     if (searchButton) {
       searchButton.addEventListener('click', function() {
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   
-    // Helper function to display results
+
     function displayResults(items, type) {
       const searchResults = document.getElementById('search-results');
       
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
       searchResults.innerHTML = html;
     }
   
-    // Notification system
+
     function showNotification(message, type) {
       const notification = document.createElement('div');
       notification.className = `notification ${type}`;
@@ -192,6 +192,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 3000);
     }
   
-    // Activate the home section on load
+    
     document.querySelector('#home').classList.add('active');
   });
