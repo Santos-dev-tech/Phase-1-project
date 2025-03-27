@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FootPro - Football Scouting Platform</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-container"></div>
+  <div class="menu">
+    <ul class="menu-content">
+      <li><a href="#home"><span class="material-symbols-outlined">home</span><span>Home</span></a></li>
+      <li><a href="#player-profiles"><span class="material-symbols-outlined">person</span><span>Player Profiles</span></a></li>
+      <li><a href="#scout-profiles"><span class="material-symbols-outlined">search</span><span>Scout Profiles</span></a></li>
+      <li><a href="#search"><span class="material-symbols-outlined">filter_alt</span><span>Search</span></a></li>
+      <li><a href="#about"><span class="material-symbols-outlined">info</span><span>About</span></a></li>
+      <li><a href="#contact"><span class="material-symbols-outlined">email</span><span>Contact</span></a></li>
+    </ul>
+  </div>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <div class="content">
+      <h1>Welcome to FootPro</h1>
+      <p>Your gateway to global football talent.</p>
+      <a href="#player-profiles" class="cta-button">Create Player Profile</a>
+      <a href="#scout-profiles" class="cta-button">Create Scout Profile</a>
+    </div>
+  </section>
+
+  <!-- Player Profiles Section -->
+  <section id="player-profiles" class="section">
+    <div class="content">
+      <h2>Player Profiles</h2>
+      <form id="player-form">
+        <input type="text" id="player-name" placeholder="Full Name" required>
+        <input type="number" id="player-age" placeholder="Age" required>
+        <input type="text" id="player-position" placeholder="Position" required>
+        <input type="text" id="player-location" placeholder="Location" required>
+        <textarea id="player-bio" placeholder="Short Bio"></textarea>
+        <input type="file" id="player-highlights" accept="video/*">
+        <button type="submit">Save Profile</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Scout Profiles Section -->
+  <section id="scout-profiles" class="section">
+    <div class="content">
+      <h2>Scout Profiles</h2>
+      <form id="scout-form">
+        <input type="text" id="scout-name" placeholder="Scout/Club Name" required>
+        <input type="text" id="scout-location" placeholder="Location" required>
+        <textarea id="scout-preferences" placeholder="Scouting Preferences"></textarea>
+        <button type="submit">Save Profile</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section id="search" class="section">
+    <div class="content">
+      <h2>Search</h2>
+      <div class="search-filters">
+        <input type="text" id="search-name" placeholder="Name">
+        <input type="number" id="search-age" placeholder="Age">
+        <input type="text" id="search-position" placeholder="Position">
+        <input type="text" id="search-location" placeholder="Location">
+        <select id="search-type">
+          <option value="player">Search Players</option>
+          <option value="scout">Search Scouts</option>
+        </select>
+        <button id="search-button">Search</button>
+      </div>
+      <div id="search-results" class="results"></div>
+    </div>
+  </section>
+
+ 
+  <section id="about" class="section">
+    <div class="content">
+      <h2>About FootPro</h2>
+      <p>FootPro is a global platform connecting football talent with scouts and clubs worldwide. Our mission is to democratize access to football scouting and provide opportunities for players from all backgrounds.</p>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="section">
+    <div class="content">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" id="contact-name" placeholder="Your Name" required>
+        <input type="email" id="contact-email" placeholder="Your Email" required>
+        <textarea id="contact-message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>
